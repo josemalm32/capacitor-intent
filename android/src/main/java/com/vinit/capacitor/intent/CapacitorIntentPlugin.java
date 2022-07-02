@@ -22,17 +22,21 @@ public class CapacitorIntentPlugin extends Plugin {
         // read intent action
         String action = intent.getAction();
         if (Intent.ACTION_SEND.equals(action)) {
+
+            // Get type of intent
+            String type = intent.getType();
             // Get the extras from the intent
             Bundle bundle = intent.getExtras();
 
-            JSObject data = new JSObject();
+            JSObject extraData = new JSObject();
             for (String key : bundle.keySet()) {
                 Object value = bundle.get(key);
-                data.put(key, value);
+                extraData.put(key, value);
             }
 
             JSObject ret = new JSObject();
-            ret.put("data", data);
+            ret.put("extraData", extraData);
+            ret.put("type",type);
             notifyListeners(EVENT_SEND_ACTION_INTENT, ret, true);
         }
     }

@@ -2,6 +2,7 @@ import type { PluginListenerHandle } from '@capacitor/core';
 
 export interface IntentData {
   extraData?: any;
+  type?: any;
 }
 
 export interface CapacitorIntentPlugin {
