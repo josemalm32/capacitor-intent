@@ -15,7 +15,7 @@ npx cap sync
 
 ## Configuration
 
-```
+```xml
 <intent-filter>
   <action android:name="android.intent.action.SEND" />
   <category android:name="android.intent.category.DEFAULT" />
@@ -25,9 +25,10 @@ npx cap sync
 
 ## Usage/Examples
 
-```
+```javascript
 import { CapacitorIntent } from '@vinit_poojary/capacitor-intent'
-
+```
+```javascript
 CapacitorIntent.addListener('getSentIntent', async ({ extraData,type }) => {
   console.log('type',type)
 	console.log('extraData',extraData)
