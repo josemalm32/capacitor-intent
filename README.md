@@ -26,13 +26,14 @@ npx cap sync
 ## Usage/Examples
 
 ```javascript
-import { CapacitorIntent } from '@vinit_poojary/capacitor-intent'
+import { CapacitorIntent } from '@vinit_poojary/capacitor-intent';
 ```
+
 ```javascript
-CapacitorIntent.addListener('getSentIntent', async ({ extraData,type }) => {
-  console.log('type',type)
-	console.log('extraData',extraData)
-})
+CapacitorIntent.addListener('getSentIntent', async ({ extraData, type }) => {
+  console.log('type', type);
+  console.log('extraData', extraData);
+});
 ```
 
 ## API
