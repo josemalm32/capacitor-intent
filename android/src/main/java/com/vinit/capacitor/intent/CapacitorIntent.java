@@ -1,11 +1,14 @@
 package com.vinit.capacitor.intent;
 
+import android.os.Bundle;
 import android.util.Log;
+import com.getcapacitor.BridgeActivity;
 
-public class CapacitorIntent {
+public class CapacitorIntent extends  BridgeActivity {
 
-    public String echo(String value) {
-        Log.i("Echo", value);
-        return value;
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        registerPlugin(CapacitorIntentPlugin.class);
     }
 }

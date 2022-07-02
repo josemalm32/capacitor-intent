@@ -1,3 +1,12 @@
+import type { PluginListenerHandle } from '@capacitor/core';
+
+export interface IntentData {
+  extraData?: any;
+}
+
 export interface CapacitorIntentPlugin {
-  echo(options: { value: string }): Promise<{ value: string }>;
+  addListener(
+    eventName: 'getSentIntent',
+    listenerFunc: (data: IntentData) => void,
+  ): Promise<PluginListenerHandle> & PluginListenerHandle;
 }

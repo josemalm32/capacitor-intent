@@ -14,7 +14,7 @@
     "@capacitor/core": "latest",
     "@capacitor/camera": "latest",
     "@capacitor/splash-screen": "latest",
-    "@vinit/capacitor-intent": "file:.."
+    "@vinit_poojary/capacitor-intent": "file:.."
   },
   "devDependencies": {
     "@capacitor/cli": "latest"
