@@ -52,5 +52,6 @@ addListener(eventName: 'getSentIntent', listenerFunc: (data: IntentData) => void
 | Prop            | Type             |
 | --------------- | ---------------- |
 | **`extraData`** | <code>any</code> |
+| **`type`**      | <code>any</code> |
 
 </docgen-api>
