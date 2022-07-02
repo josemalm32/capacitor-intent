@@ -1,4 +1,8 @@
-# @vinit_poojary/capacitor-intent
+# Android Intent Plugin for Capacitor
+
+![npm](https://img.shields.io/npm/v/@vinit_poojary/capacitor-intent)
+![npm bundle size](https://img.shields.io/bundlephobia/minzip/@vinit_poojary/capacitor-intent)
+![NPM](https://img.shields.io/npm/l/@vinit_poojary/capacitor-intent)
 
 Capacitor Plugin for android intent
 
@@ -9,12 +13,33 @@ npm install @vinit_poojary/capacitor-intent
 npx cap sync
 ```
 
+## Configuration
+
+```
+<intent-filter>
+  <action android:name="android.intent.action.SEND" />
+  <category android:name="android.intent.category.DEFAULT" />
+  <data android:mimeType="text/plain" />
+</intent-filter>
+```
+
+## Usage/Examples
+
+```
+import { CapacitorIntent } from '@vinit_poojary/capacitor-intent'
+
+CapacitorIntent.addListener('getSentIntent', async ({ extraData,type }) => {
+  console.log('type',type)
+	console.log('extraData',extraData)
+})
+```
+
 ## API
 
 <docgen-index>
 
-* [`addListener('getSentIntent', ...)`](#addlistenergetsentintent)
-* [Interfaces](#interfaces)
+- [`addListener('getSentIntent', ...)`](#addlistenergetsentintent)
+- [Interfaces](#interfaces)
 
 </docgen-index>
 
@@ -34,18 +59,15 @@ addListener(eventName: 'getSentIntent', listenerFunc: (data: IntentData) => void
 
 **Returns:** <code>Promise&lt;<a href="#pluginlistenerhandle">PluginListenerHandle</a>&gt; & <a href="#pluginlistenerhandle">PluginListenerHandle</a></code>
 
---------------------
-
+---
 
 ### Interfaces
-
 
 #### PluginListenerHandle
 
 | Prop         | Type                                      |
 | ------------ | ----------------------------------------- |
 | **`remove`** | <code>() =&gt; Promise&lt;void&gt;</code> |
-
 
 #### IntentData
 
