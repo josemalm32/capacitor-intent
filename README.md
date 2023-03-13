@@ -13,6 +13,10 @@ npm install @vinit_poojary/capacitor-intent
 npx cap sync
 ```
 
+```bash
+yarn add @vinit_poojary/capacitor-intent
+yarn cap sync
+```
 ## Configuration
 
 ```xml
@@ -40,8 +44,8 @@ CapacitorIntent.addListener('getSentIntent', async ({ extraData, type }) => {
 
 <docgen-index>
 
-- [`addListener('getSentIntent', ...)`](#addlistenergetsentintent)
-- [Interfaces](#interfaces)
+* [`addListener('getSentIntent', ...)`](#addlistenergetsentintent)
+* [Interfaces](#interfaces)
 
 </docgen-index>
 
@@ -61,15 +65,18 @@ addListener(eventName: 'getSentIntent', listenerFunc: (data: IntentData) => void
 
 **Returns:** <code>Promise&lt;<a href="#pluginlistenerhandle">PluginListenerHandle</a>&gt; & <a href="#pluginlistenerhandle">PluginListenerHandle</a></code>
 
----
+--------------------
+
 
 ### Interfaces
+
 
 #### PluginListenerHandle
 
 | Prop         | Type                                      |
 | ------------ | ----------------------------------------- |
 | **`remove`** | <code>() =&gt; Promise&lt;void&gt;</code> |
+
 
 #### IntentData
 
