@@ -67,6 +67,7 @@
     "@capacitor/docgen": "^0.2.1",
     "@capacitor/ios": "^4.7.0",
     "@ionic/prettier-config": "^2.0.0",
+    "@types/node": "^18.15.1",
     "eslint": "^8.36.0",
     "prettier": "^2.8.4",
     "prettier-plugin-java": "^2.1.0",
