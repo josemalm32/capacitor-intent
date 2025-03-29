@@ -44,7 +44,7 @@ CapacitorIntent.addListener('getSentIntent', async ({ extraData, type }) => {
 
 <docgen-index>
 
-* [`addListener('getSentIntent', ...)`](#addlistenergetsentintent)
+* [`addListener('getSentIntent', ...)`](#addlistenergetsentintent-)
 * [Interfaces](#interfaces)
 
 </docgen-index>
